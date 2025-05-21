@@ -30,10 +30,7 @@ Not reusable
 
 ### Syntax
 ```
-CREATE #tempTable_name (...);
-
-INSERT INTO #tempTable_name
-SELECT ... FROM #tempTable_name
+CREATE #tempTable_name (... col def here);
 ```
 
 ### Pros
@@ -44,6 +41,26 @@ SELECT ... FROM #tempTable_name
 - Can be indexed
 
 ## Table Variables - DECLARE @varTableName TABLE
+### Syntax
+```
+DECLARE @varTableName TABLE (... col def here);
+```
+### Scope
+- Batch or stored proc
+
+### Pros
+- Lightweight
+- Great for small datasets
+
+## Derived/Inline tables
+### Syntax
+```
+SELECT *
+FROM (SELECT col1, col2 FROM AnotherTable)
+AS yourInlineTable
+```
+### Scope
+One-time ussage within a query
 
 ## "Staging" tables
 Even though a staging table is a permanent structure in SQL, we can view it as a staging area for data preparation for operations such as:
