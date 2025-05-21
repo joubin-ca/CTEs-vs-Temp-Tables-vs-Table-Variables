@@ -9,6 +9,22 @@ Consideration that needed to make are:
 - Reuse across batches
 
 ## Common Table Expressions (CTEs) - WITH
+### Syntax
+```
+WITH cte_name (col1, col2) AS
+(
+  SELECT ...
+)
+SELECT * FROM cte_name
+```
+### Scope
+A single query only
+
+### Pros
+Clean and readable
+
+### Cons
+Not reusable
 
 ## Temporary Tables - #temptable
 
