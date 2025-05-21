@@ -13,3 +13,10 @@ Consideration that needed to make are:
 ## Temporary Tables - #temptable
 
 ## Table Variables - DECLARE @varTableName TABLE
+
+## "Staging" tables
+Even though a staging table is a permanent structure in SQL, we can view it as a staging area for data preparation for operations such as:
+- ETL
+- Data Cleansing
+- Bulk Imports
+- Reporting Preparations
