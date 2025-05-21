@@ -28,6 +28,21 @@ Not reusable
 
 ## Temporary Tables - #temptable
 
+### Syntax
+```
+CREATE #tempTable_name (...);
+
+INSERT INTO #tempTable_name
+SELECT ... FROM #tempTable_name
+```
+
+### Pros
+- Save in tempdb
+- Scoped to session
+- Holds data across multiple queries within the session
+- Can be updated, in the session
+- Can be indexed
+
 ## Table Variables - DECLARE @varTableName TABLE
 
 ## "Staging" tables
