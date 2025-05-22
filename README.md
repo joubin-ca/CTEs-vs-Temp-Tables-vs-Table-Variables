@@ -68,3 +68,12 @@ Even though a staging table is a permanent structure in SQL, we can view it as a
 - Data Cleansing
 - Bulk Imports
 - Reporting Preparations
+Knowing that it is used only for staging/transitional data for processing, it's really looked at as **how it's used**.
+
+### Naming convention
+Two options:
+- Prefix with a differentiator such as "stg_" or "stage_"
+- Place it within a schema name appropriately such as "etl" or "stg"
+
+### Notes
+The data in a staging table is cleaned up either after an operation or just before the next operation.
