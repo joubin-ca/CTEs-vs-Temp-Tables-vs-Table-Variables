@@ -53,6 +53,7 @@ DECLARE @varTableName TABLE (... col def here);
 - Great for small datasets
 
 ## Derived/Inline tables
+Derived tables could be looked at as temporary-views that exists for the duration of the execution of the outer query.
 ### Syntax
 ```
 SELECT *
@@ -60,7 +61,7 @@ FROM (SELECT col1, col2 FROM AnotherTable)
 AS yourInlineTable
 ```
 ### Scope
-One-time ussage within a query
+One-time usage within a query
 
 ## "Staging" tables
 Even though a staging table is a permanent structure in SQL, we can view it as a staging area for data preparation for operations such as:
